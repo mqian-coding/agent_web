@@ -1,0 +1,9 @@
+syntax = "proto3";
+package http_proto;
+option go_package = "github.com/yourusername/yourproject/http_proto";
+
+message HttpRequest {
+  string method = 1 [json_name = "method"];
+  string url = 2 [json_name = "url"];
+  bytes body = 3 [json_name = "body"];
+}
