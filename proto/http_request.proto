@@ -1,6 +1,6 @@
 syntax = "proto3";
 package http_proto;
-option go_package = "github.com/yourusername/yourproject/http_proto";
+option go_package = "github.com/mqian-coding/agent_web/proto/gen;gen";
 
 message HttpRequest {
   string method = 1 [json_name = "method"];
