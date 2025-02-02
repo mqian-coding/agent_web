@@ -2,6 +2,11 @@ syntax = "proto3";
 package http_proto;
 option go_package = "github.com/mqian-coding/agent_web/proto/gen;gen";
 
+message SemanticParserResponse {
+  repeated HttpRequest http_requests = 1;
+  repeated string chain_of_thought = 2;
+}
+
 message HttpRequest {
   string method = 1 [json_name = "method"];
   string url = 2 [json_name = "url"];
