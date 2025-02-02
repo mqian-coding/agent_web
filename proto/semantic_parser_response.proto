@@ -3,8 +3,8 @@ package http_proto;
 option go_package = "github.com/mqian-coding/agent_web/proto/gen;gen";
 
 message SemanticParserResponse {
-  repeated HttpRequest http_requests = 1;
-  repeated string chain_of_thought = 2;
+  repeated HttpRequest http_requests = 1; // http_requests is an array of http_requests to make as determined by semantic parser
+  repeated string chain_of_thought = 2; // chain_of_thought is an array of same length as http_requests which explains why it chose each http_request (or possibly no requests)
 }
 
 message HttpRequest {
